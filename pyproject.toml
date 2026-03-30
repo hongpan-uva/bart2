@@ -22,13 +22,13 @@ classifiers = [
 requires-python = ">=3.0"
 dependencies = [
     "setuptools",
-    "tables>=3.9.2",
-    "blosc2>=2.3.2",
-    "numpy>=1.26.4",
-    "pandas>=2.1.4",
-    "scipy>=1.13.1",
-    "matplotlib>=3.9.0",
-    "scikit-learn>=1.5.0",
+    "tables==3.9.2",
+    "blosc2==2.3.2",
+    "numpy==1.26.4",
+    "pandas==2.1.4",
+    "scipy==1.13.1",
+    "matplotlib==3.9.0",
+    "scikit-learn==1.5.0",
 ]
 
 [project.urls]
