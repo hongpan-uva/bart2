@@ -3,7 +3,7 @@
 NOTES
 ===========
 
-This is a standalone repository for the local command line version of BART (v2.0). 
+This is a standalone repository for the local command line version of BART (v2.1). 
 
 For the source code of BART web interface, please refer to:
 - <a href="https://github.com/zanglab/BARTweb_frontend">**BARTweb Frontend**</a> for receiving users’ job submission requests and displaying job execution information and results. 
@@ -15,7 +15,7 @@ For the custom code for processing the data and generating the figures in the ma
 
 
 
-README for BART(v2.0)
+README for BART(v2.1)
 ===========
 
 
@@ -55,7 +55,7 @@ wget https://virginia.box.com/shared/static/bxdggnhp4bjz2l5h2zjlisnzp0ac7axf.gz 
 tar zxf mm10_library.tar.gz
 ```
 
-Modify the configuration file (bart2/bart.conf). For example, if you have the hg38_library (or mm10_library) in /abc/def/hg38_library (or /abc/def/mm10_library):
+Then, modify the configuration file (bart2/bart.conf). For example, if you have the hg38_library (or mm10_library) in /abc/def/hg38_library (or /abc/def/mm10_library):
 
 ```shell
 [path]
@@ -63,16 +63,24 @@ hg38_library_dir = /abc/def/
 mm10_library_dir = /abc/def/
 ```
 
+#### Backup URLs for data library
+
+##### Zenodo
+
+hg38:`https://zenodo.org/records/18854649/files/hg38_library.tar.gz?download=1`
+
+mm10:`https://zenodo.org/records/18854649/files/mm10_library.tar.gz?download=1`
+
+##### OneDrive
+
+hg38:`https://myuva-my.sharepoint.com/:u:/g/personal/hz9fq_virginia_edu/IQB2IqcSn23wSaVIP9PoUS1iAVgA5x4T06AzsBcrQ0wLiDA?e=RPOgde`
+
+mm10:`https://myuva-my.sharepoint.com/:u:/g/personal/hz9fq_virginia_edu/IQCankHDq3WqQIO7zYFP3EiqAe_bjFK14kWsQ8kJIpYOJZg?e=pO5PK1`
+
 #### Install BART
 
 ```shell
 pip install .
-```
-
-For development/editable install:
-
-```shell
-pip install -e .
 ```
 
 To install a source distribution of BART, unpack the distribution tarball and go to the directory where you unpacked BART.
