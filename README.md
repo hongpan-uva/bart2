@@ -35,9 +35,8 @@ BART web interface (Beta version) can be accessed <a href="http://bartweb.org/">
 # Installation
 #### Prerequisites
 
-BART uses Python's distutils tools for source installation. Before installing BART, please make sure Python3 and the following python packages are installed. We highly recommend the <a href="https://docs.anaconda.com/anaconda/install/">Anaconda environment</a>, which include all the required python packages.
+BART requires Python 3 and the following packages. We highly recommend using a <a href="https://docs.anaconda.com/anaconda/install/">conda environment</a> or virtual environment.
 
-- setuptools
 - numpy
 - pandas
 - scipy
@@ -45,15 +44,35 @@ BART uses Python's distutils tools for source installation. Before installing BA
 - scikit-learn
 - matplotlib
 
-#### Download the source package and setup the configuration file
+#### Download the data library
 
-You have to download the Human or Mouse Data Library under your own directory before install BART. The unpacked libraries occupy 14GB hard drive storage in the download directory. 
+You have to download the Human or Mouse Data Library before using BART. The unpacked libraries occupy 14GB storage.
 
 ```shell
 wget https://virginia.box.com/shared/static/2kqczz9gixetcr9p4bl650uyrio5zd33.gz -O hg38_library.tar.gz
-tar zxf hg38_library.tar.gz 
+tar zxf hg38_library.tar.gz
 wget https://virginia.box.com/shared/static/bxdggnhp4bjz2l5h2zjlisnzp0ac7axf.gz -O mm10_library.tar.gz
 tar zxf mm10_library.tar.gz
+```
+
+Modify the configuration file (bart2/bart.conf). For example, if you have the hg38_library (or mm10_library) in /abc/def/hg38_library (or /abc/def/mm10_library):
+
+```shell
+[path]
+hg38_library_dir = /abc/def/
+mm10_library_dir = /abc/def/
+```
+
+#### Install BART
+
+```shell
+pip install .
+```
+
+For development/editable install:
+
+```shell
+pip install -e .
 ```
 
 To install a source distribution of BART, unpack the distribution tarball and go to the directory where you unpacked BART.
